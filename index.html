@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Kai Watch | Simulador de Medallas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <h1>YO-KAI WATCH</h1>
+                <p>SIMULADOR DE MEDALLAS</p>
+                <div class="header-stats">
+                    <div class="series-badge" id="current-series-badge">Serie 1: Vínculos Espirituales</div>
+                    <div class="coins-display">
+                        <span class="coin-icon">Y</span>
+                        <span id="yo-coins-balance">0</span>
+                    </div>
+                    <div class="tokens-display" title="Fragmentos / Fichas Expendekai">
+                        <img src="images/fragmento.png" class="token-img" alt="Fragmento">
+                        <span id="fragments-balance">0</span><span style="font-size: 0.8em; color: var(--text-secondary);">/50</span>
+                        <img src="images/ficha.png" class="token-img" alt="Ficha" style="margin-left: 15px;">
+                        <span id="tokens-balance">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Main navigation tabs -->
+            <div class="main-tabs">
+                <button class="main-tab active" data-target="view-packs">Abrir Sobres</button>
+                <button class="main-tab" data-target="view-medallium">Medallium</button>
+                <button class="main-tab" data-target="view-minigames">Minijuegos</button>
+                <button class="main-tab" data-target="view-expendekai">Expendekai</button>
+            </div>
+
+            <!-- View: Pack Opening -->
+            <div id="view-packs" class="view-section">
+                <!-- Series Selector for Packs -->
+                <div class="pack-series-selector">
+                    <button class="series-pack-tab active" data-series="1">Serie 1</button>
+                    <button class="series-pack-tab" data-series="2">Serie 2</button>
+                    <button class="series-pack-tab" data-series="3">Serie 3</button>
+                    <button class="series-pack-tab" data-series="4">Serie 4</button>
+                </div>
+
+                <!-- Pack to be clicked -->
+                <div class="pack-container" id="packContainer">
+                    <div class="pack-options">
+                        <div class="pack" id="blindBag">
+                            <div class="pack-shine"></div>
+                            
+                            <!-- Medallas de la Serie 1 (Genedáver, Dragón Azur, Shogunyan) -->
+                            <div class="pack-medals series-1-medals">
+                                <img src="images/series1/genedaver.png" class="pack-medal left" alt="Genedáver">
+                                <img src="images/series1/dragonazur.png" class="pack-medal right" alt="Dragón Azur">
+                                <img src="images/series1/shogunyan.png" class="pack-medal center" alt="Shogunyan">
+                            </div>
+
+                            <!-- Medallas de la Serie 2 (Komaleón, Komatigrado, Komashura) -->
+                            <div class="pack-medals series-2-medals">
+                                <img src="images/series2/komaleon.png" class="pack-medal left" alt="Komaleón">
+                                <img src="images/series2/komatigrado.png" class="pack-medal right" alt="Komatigrado">
+                                <img src="images/series2/komashura.png" class="pack-medal center" alt="Komashura">
+                            </div>
+
+                            <!-- Medallas de la Serie 3 (Morfea, Dandiniche, Ser Bero) -->
+                            <div class="pack-medals series-3-medals">
+                                <img src="images/series3/morfea.png" class="pack-medal left" alt="Morfea">
+                                <img src="images/series3/dandiniche.png" class="pack-medal center" alt="Dandiniche">
+                                <img src="images/series3/serbero.png" class="pack-medal right" alt="Ser Bero">
+                            </div>
+
+                            <!-- Medallas de la Serie 4 (Pom, Abuflorido, Aburroz) -->
+                            <div class="pack-medals series-4-medals">
+                                <img src="images/series4/pom.png" class="pack-medal left" alt="Pom">
+                                <img src="images/series4/abuflorido.png" class="pack-medal center" alt="Abuflorido">
+                                <img src="images/series4/aburroz.png" class="pack-medal right" alt="Aburroz">
+                            </div>
+
+                            <div class="pack-design">
+                                <h2 id="packTitle">Bolsa Sorpresa</h2>
+                                <div class="pack-info-bottom">
+                                    <span>¡Contiene 3 Medallas!</span>
+                                    <div class="pack-cost">30 Yo-Coins</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="instruction">Haz clic para abrir 1 sobre</div>
+                    </div>
+                    
+                    <button id="openTenBtn" class="btn secondary pack-x10-btn">
+                        <span class="btn-text">Abrir x10 sobres</span>
+                        <span class="btn-cost">300 Yo-Coins</span>
+                    </button>
+                </div>
+
+                <!-- Area for the medals to appear -->
+                <div class="results-container hidden" id="resultsContainer">
+                    <div class="medals-grid" id="medalsGrid">
+                        <!-- Medals will be injected here via JS -->
+                    </div>
+                    
+                    <div class="action-buttons hidden" id="actionButtons">
+                        <button id="openAnotherBtn" class="btn primary">Abrir otro sobre</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View: Medallium -->
+            <div id="view-medallium" class="view-section hidden">
+                <div class="collection-section">
+                    <div class="medallium-header">
+                        <h3>Medallium</h3>
+                        <div class="collection-progress">
+                            <span id="medallium-progress">0/38</span> completado
+                        </div>
+                    </div>
+                    
+                    <div class="medallium-series-tabs">
+                        <div class="tabs-group">
+                            <button class="series-tab active" data-series="1">Serie 1</button>
+                            <button class="series-tab" data-series="2">Serie 2</button>
+                            <button class="series-tab" data-series="3">Serie 3</button>
+                            <button class="series-tab" data-series="4">Serie 4</button>
+                        </div>
+                        <button id="resetCollectionBtn" class="btn secondary reset-btn">Limpiar colección</button>
+                    </div>
+
+                    <div class="collection-stats">
+                        <span class="stat especial"><span class="dot"></span>Especial: <span id="stat-especial">0</span></span>
+                        <span class="stat legendario"><span class="dot"></span>Legendario: <span id="stat-legendario">0</span></span>
+                        <span class="stat inusual"><span class="dot"></span>Inusual: <span id="stat-inusual">0</span></span>
+                        <span class="stat poco-comun"><span class="dot"></span>Poco Común: <span id="stat-poco">0</span></span>
+                        <span class="stat comun"><span class="dot"></span>Común: <span id="stat-comun">0</span></span>
+                    </div>
+                    <div class="medallium-page-controls">
+                        <button id="medallium-prev-page" class="medallium-page-button" type="button" aria-label="Página anterior">&#8249;</button>
+                        <span id="medallium-page-label" aria-live="polite">Página 1 de 1</span>
+                        <button id="medallium-next-page" class="medallium-page-button" type="button" aria-label="Página siguiente">&#8250;</button>
+                    </div>
+                    <div class="medallium-grid" id="medalliumGrid">
+                        <!-- Medallium slots -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- View: Minigames -->
+            <div id="view-minigames" class="view-section hidden">
+                <div class="minigames-container">
+                    <div class="minigame-mode-switch">
+                        <button class="minigame-mode active" data-mode="battle">Batalla Yo-Kai</button>
+                        <button class="minigame-mode" data-mode="mystery">Yo-Kai Misterioso</button>
+                        <button class="minigame-mode" data-mode="adventure">Aventura Yo-Kai</button>
+                    </div>
+
+                    <!-- Phase 1: Selection -->
+                    <div id="minigame-selection" class="game-phase">
+                        <div class="phase-header">
+                            <h3>Batalla Yo-Kai</h3>
+                            <p>Selecciona 6 Yo-Kai de tu colección para luchar</p>
+                            <div class="selection-counter"><span id="selected-count">0</span>/6 seleccionados</div>
+                        </div>
+                        <div id="minigame-yokai-list" class="medallium-grid">
+                            <!-- Player's unlocked Yo-Kai for selection -->
+                        </div>
+                        <div class="phase-actions">
+                            <button id="start-battle-btn" class="btn primary" disabled>¡A luchar!</button>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2: Battle -->
+                    <div id="minigame-battle" class="game-phase hidden">
+                        <div class="battle-arena">
+                            <div class="battle-header">
+                                <div class="player-info">
+                                    <span class="player-name">Tú</span>
+                                    <span id="player-score" class="score">0</span>
+                                </div>
+                                <div class="vs-badge">VS</div>
+                                <div class="opponent-info">
+                                    <span id="ai-score" class="score">0</span>
+                                    <span class="player-name">IA</span>
+                                </div>
+                            </div>
+
+                            <div class="battle-field">
+                                <div id="player-slot" class="battle-slot">
+                                    <div class="slot-placeholder">?</div>
+                                </div>
+                                <div class="battle-message" id="battle-message">¡Elige un Yo-Kai!</div>
+                                <div id="ai-slot" class="battle-slot">
+                                    <div class="slot-placeholder">?</div>
+                                </div>
+                            </div>
+
+                            <div class="battle-hand">
+                                <h4>Tu equipo</h4>
+                                <div id="player-hand-grid" class="hand-grid">
+                                    <!-- Player's 6 selected Yo-Kai -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3: Results -->
+                    <div id="minigame-results" class="game-phase hidden">
+                        <div class="results-card">
+                            <h2 id="final-result-title">¡Victoria!</h2>
+                            <div class="final-scores">
+                                <div class="final-score-item">
+                                    <span>Tú</span>
+                                    <h3 id="final-player-score">0</h3>
+                                </div>
+                                <div class="final-score-item">
+                                    <span>IA</span>
+                                    <h3 id="final-ai-score">0</h3>
+                                </div>
+                            </div>
+                            <button id="restart-game-btn" class="btn primary">Volver a jugar</button>
+                        </div>
+                    </div>
+
+                    <div id="mystery-game" class="game-phase hidden">
+                        <div class="mystery-card">
+                            <div class="phase-header">
+                                <h3>Yo-Kai Misterioso</h3>
+                                <p>Adivina el nombre del Yo-Kai oculto</p>
+                            </div>
+
+                            <div class="mystery-info-row">
+                                <div class="mystery-rank-panel">
+                                    <span class="mystery-label">Rango</span>
+                                    <img id="mystery-rank" src="" alt="Rango del Yo-Kai" class="mystery-rank-icon">
+                                </div>
+
+                                <div class="mystery-tribe-panel">
+                                    <span class="mystery-label">Tribu</span>
+                                    <img id="mystery-tribe" src="" alt="Tribu del Yo-Kai" class="mystery-tribe-icon">
+                                </div>
+                            </div>
+
+                            <div id="mystery-word" class="mystery-word"></div>
+
+                            <div class="mystery-hint">
+                                <span>Primera letra:</span>
+                                <strong id="mystery-first-letter">-</strong>
+                            </div>
+
+                            <div class="mystery-input-group">
+                                <input id="mystery-answer" type="text" maxlength="30" placeholder="Escribe el nombre" autocomplete="off">
+                                <button id="guess-yokai-btn" class="btn primary">Adivinar</button>
+                            </div>
+
+                            <p id="mystery-message" class="mystery-message"></p>
+                            <button id="mystery-next-btn" class="btn secondary hidden">Siguiente reto</button>
+                        </div>
+                    </div>
+
+                    <div id="adventure-game" class="game-phase hidden">
+                        <section id="adventure-selection" class="adventure-panel">
+                            <div class="phase-header">
+                                <h3>Aventura Yo-Kai</h3>
+                                <p>Elige 3 Yo-Kai de tu colección para formar el equipo</p>
+                                <div class="selection-counter"><span id="adventure-selected-count">0</span>/3 elegidos</div>
+                            </div>
+                            <div id="adventure-yokai-list" class="adventure-roster"></div>
+                            <div class="phase-actions">
+                                <button id="start-adventure-btn" class="btn primary" disabled>Comenzar aventura</button>
+                            </div>
+                        </section>
+
+                        <section id="adventure-battle" class="adventure-panel hidden">
+                            <div class="adventure-statusbar">
+                                <h3>Aventura Yo-Kai</h3>
+                                <span id="adventure-turn-label">Turno 1</span>
+                            </div>
+                            <div class="adventure-side">
+                                <h4>Rivales</h4>
+                                <div id="adventure-enemy-team" class="adventure-team enemy-team"></div>
+                            </div>
+                            <div class="adventure-action-message" id="adventure-message" aria-live="polite">Elige un Yo-Kai de tu equipo.</div>
+                            <div class="adventure-controls">
+                                <button id="adventure-roll-btn" class="btn primary" disabled>Tirar dados</button>
+                                <button id="adventure-ability-btn" class="btn secondary" disabled>Habilidad de tribu</button>
+                                <button id="adventure-attack-btn" class="btn primary hidden" disabled>Atacar objetivo</button>
+                                <button id="adventure-reroll-btn" class="btn secondary hidden" disabled>Volver a lanzar dado</button>
+                            </div>
+                            <div id="adventure-dice" class="adventure-dice" aria-live="polite"></div>
+                            <div class="adventure-side">
+                                <h4>Tu equipo</h4>
+                                <div id="adventure-player-team" class="adventure-team"></div>
+                            </div>
+                            <p class="adventure-hint" id="adventure-hint">Selecciona uno de tus Yo-Kai para actuar.</p>
+                        </section>
+
+                        <section id="adventure-results" class="results-card adventure-panel hidden">
+                            <h2 id="adventure-result-title">Aventura finalizada</h2>
+                            <p id="adventure-result-summary"></p>
+                            <p id="adventure-reward-message" class="reward-message"></p>
+                            <button id="restart-adventure-btn" class="btn primary">Volver a jugar</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View: Expendekai -->
+            <div id="view-expendekai" class="view-section hidden">
+                <div class="expendekai-container">
+                    <div class="expendekai-header">
+                        <h3>Expendekai</h3>
+                        <p>Canjea tus Fichas por medallas específicas.</p>
+                    </div>
+                    
+                    <div class="expendekai-grid" id="expendekaiGrid">
+                        <!-- Medals available for purchase will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Celebration effects -->
+    <div id="confetti-container"></div>
+
+    <!-- Medal Modal -->
+    <div id="medalModal" class="modal-overlay" onclick="if(event.target === this) closeMedalModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeMedalModal()">×</button>
+            <div class="modal-medal-container">
+                <img id="modalMedalImage" src="" alt="Medalla" class="modal-large-img">
+            </div>
+            
+            <div class="modal-details">
+                <img id="modalMedalTribe" src="" class="modal-tribe-icon" alt="Tribu">
+                <h2 id="modalMedalName" class="modal-name">Nombre</h2>
+                <img id="modalMedalRank" src="" class="modal-rank-icon" alt="Rango">
+            </div>
+
+            <div id="modalMedalRarity" class="modal-rarity">Rareza</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

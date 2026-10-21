@@ -1,0 +1,48 @@
+Series 1: Vínculos espirituales
+
+- Mochimacho (Común)(Valiente)(D)
+- Machimio (Común)(Valiente)(D)
+- Yelmandante (Común)(Valiente)(D)
+- Juntollero (Poco común)(Valiente)(A)
+- Genedaver (Inusual)(Valiente)(S)
+- Cotilleja (Común)(Misterioso)(D)
+- Marulleja (Poco común)(Misterioso)(B)
+- Esquelleja (Inusual)(Misterioso)(B)
+- Telespejo (Común)(Misterioso)(C)
+- Malpejismo (Poco común)(Misterioso)(A)
+- Castelius III (Común)(Robusto)(C)
+- Castelius II (Poco común)(Robusto)(B)
+- Castelius I (Poco común)(Robusto)(A)
+- Globqueo (Común)(Robusto)(D)
+- Globtundente (Común)(Robusto)(D)
+- Jibanyan (Común)(Guapo)(D)
+- Espinyan (Poco común)(Guapo)(B)
+- Pelochnyan (Poco común)(Guapo)(B)
+- Escanlofrio (Común)(Guapo)(E)
+- Frihuahua (Inusual)(Guapo)(S)
+- Lavadenco (Inusual)(Guapo)(S)
+- Felisonte (Común)(Amable)(C)
+- Reversa (Poco común)(Amable)(A)
+- Reversada (Inusual)(Amable)(A)
+- Bolilete (Poco común)(Amable)(A)
+- Doblilete (Poco común)(Amable)(A)
+- Noguio (Común)(Oscuro)(E)
+- Topami (Común)(Oscuro)(D)
+- Encielago (Común)(Oscuro)(D)
+- Caserielago (Poco común)(Oscuro)(A)
+- Ermicielago (Inusual)(Oscuro)(A)
+- Negatalia (Común)(Siniestro)(D)
+- Draqui (Común)(Escurridizo)(D)
+- Lord Dragon (Inusual)(Escurridizo)(S)
+- Dragon Azur (Inusual)(Escurridizo)(S)
+- Charlatón (Común)(Escurridizo)(C)
+- Tochaplátano (Inusual)(Escurridizo)(A)
+- Shogunyan (Legendario)(Valiente)(S)
+- Zafinyan (Especial)(Guapo)(A)
+
+RAREZAS
+----------
+- Común: 60%
+- Poco común: 30%
+- Inusual: 9%
+- Legendario: 1%

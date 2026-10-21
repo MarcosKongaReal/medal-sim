@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Test - Cambio de Título de Pack</title>
+</head>
+<body>
+    <h1>Test: Verificar cambio de título del pack</h1>
+    
+    <div id="packTitle">Bolsa Sorpresa (inicial)</div>
+    
+    <button onclick="testSeries1()">Serie 1</button>
+    <button onclick="testSeries2()">Serie 2</button>
+    
+    <script>
+        const seriesInfo = {
+            1: { name: "Vínculos Espirituales", color: "#ef4444", regularCount: 38 },
+            2: { name: "Remolinos temibles", color: "#3b82f6", regularCount: 42 }
+        };
+        
+        let currentSeries = 1;
+        
+        function updateHeaderSeries() {
+            const packTitle = document.getElementById('packTitle');
+            if (packTitle && seriesInfo[currentSeries]) {
+                packTitle.textContent = seriesInfo[currentSeries].name;
+            }
+        }
+        
+        function testSeries1() {
+            currentSeries = 1;
+            updateHeaderSeries();
+            console.log("Cambiado a Serie 1");
+        }
+        
+        function testSeries2() {
+            currentSeries = 2;
+            updateHeaderSeries();
+            console.log("Cambiado a Serie 2");
+        }
+        
+        // Inicializar
+        updateHeaderSeries();
+    </script>
+</body>
+</html>

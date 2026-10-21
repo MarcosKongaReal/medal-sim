@@ -1,0 +1,53 @@
+Series 2: Remolinos temibles
+
+- Flamileon (Común)(Valiente)(C)
+- Temboleon (Poco común)(Valiente)(B)
+- Sirleon (Inusual)(Valiente)(A)
+- Ludorai (Común)(Valiente)(C)
+- Lustre (Poco común)(Valiente)(A)
+- Furtre (Poco común)(Valiente)(A)
+- Dortre (Inusual)(Valiente)(S)
+- Cupistolo (Común)(Misterioso)(C)
+- Casanovo (Poco común)(Misterioso)(A)
+- Casanono (Poco común)(Misterioso)(A)
+- Kyubi (Inusual)(Misterioso)(S)
+- Iluho (Común)(Misterioso)(C)
+- Eluho (Común)(Misterioso)(C)
+- Ubiho (Poco común)(Misterioso)(B)
+- Montaña Loca (Común)(Robusto)(C)
+- Lord Lava (Poco común)(Robusto)(B)
+- Nihablar (Común)(Robusto)(E)
+- Impas (Poco común)(Robusto)(A)
+- Murallin (Inusual)(Robusto)(A)
+- Komasan (Común)(Guapo)(D)
+- Komaleon (Poco común)(Guapo)(A)
+- Komajiro (Común)(Guapo)(D)
+- Komatigrado (Poco común)(Guapo)(A)
+- Cimbron (Común)(Amable)(E)
+- Pasodon (Común)(Amable)(E)
+- Ritma (Común)(Amable)(D)
+- Papa Rayo (Poco común)(Amable)(A)
+- Tio Infinito (Inusual)(Amable)(S)
+- Algio (Común)(Oscuro)(E)
+- Agujeto (Poco común)(Oscuro)(C)
+- Machaka (Inusual)(Oscuro)(B)
+- Suspicioni (Común)(Oscuro)(D)
+- Pataletoni (Común)(Oscuro)(D)
+- Contrarioni (Poco común)(Oscuro)(B)
+- Ejemtos (Común)(Siniestro)(E)
+- Erizlor (Común)(Siniestro)(D)
+- Pezqueroso (Común)(Escurridizo)(D)
+- Pezgativo (Poco común)(Escurridizo)(B)
+- Pezquiciado (Inusual)(Escurridizo)(A)
+- Mandícoro (Poco común)(Escurridizo)(B)
+- Ciniserpe (Poco común)(Escurridizo)(B)
+- Arfidio (Poco común)(Escurridizo)(A)
+- Komashura (Legendario)(Misterioso)(S)
+- Esmenyan (Especial)(Guapo)(A)
+
+RAREZAS
+----------
+- Común: 60%
+- Poco común: 30%
+- Inusual: 9%
+- Legendario: 1%
