@@ -1984,3 +1984,299 @@ main {
     width: 18px;
     object-fit: contain;
 }
+
+@media (max-width: 600px) {
+    .app-container {
+        padding: 1rem;
+    }
+
+    header {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        letter-spacing: -1.5px;
+    }
+
+    .logo p {
+        margin-top: 0;
+        font-size: 0.85rem;
+        letter-spacing: 2.5px;
+    }
+
+    .series-badge {
+        max-width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .coins-display,
+    .tokens-display {
+        padding: 0.45rem 0.75rem;
+        font-size: 1rem;
+    }
+
+    .tokens-display .token-img[style] {
+        margin-left: 0.25rem !important;
+    }
+
+    main {
+        gap: 1.25rem;
+    }
+
+    .main-tabs {
+        padding: 0.35rem;
+    }
+
+    .main-tab,
+    .series-pack-tab,
+    .series-tab,
+    .minigame-mode,
+    .btn,
+    .btn-buy,
+    .medallium-page-button {
+        min-height: 44px;
+    }
+
+    .pack-series-selector {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .series-pack-tab {
+        min-width: 0;
+        padding: 0.5rem 0.25rem;
+        font-size: 0.85rem;
+    }
+
+    .instruction {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .pack-x10-btn {
+        width: min(100%, 280px);
+        padding: 0.8rem 1rem;
+    }
+
+    .medals-grid {
+        gap: 0.75rem;
+    }
+
+    .medal-wrapper {
+        width: min(42vw, 160px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .medal-name {
+        font-size: 1rem;
+    }
+
+    .collection-section {
+        margin-top: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .medallium-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .collection-progress {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .medallium-series-tabs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .tabs-group {
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .series-tab {
+        flex: 1;
+        min-width: 0;
+        font-size: 0.95rem;
+    }
+
+    .reset-btn {
+        width: 100%;
+    }
+
+    .collection-stats {
+        gap: 0.45rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .stat {
+        gap: 0.35rem;
+        padding: 0.4rem 0.55rem;
+        font-size: 0.78rem;
+    }
+
+    #medalliumGrid {
+        width: 100%;
+    }
+
+    .medallium-album-page {
+        grid-template-rows: repeat(4, minmax(40px, 1fr));
+        gap: 0.25rem;
+        padding: 0.45rem;
+        border-width: 2px;
+    }
+
+    #medalliumGrid .medallium-slot {
+        width: 100%;
+        min-width: 0;
+        padding: 0.15rem;
+    }
+
+    #medalliumGrid .medallium-slot.locked span,
+    #medalliumGrid .medallium-slot.unlocked span {
+        font-size: 0.55rem;
+        overflow-wrap: anywhere;
+    }
+
+    .minigames-container,
+    .expendekai-container {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .phase-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .minigame-mode-switch {
+        gap: 0.5rem;
+    }
+
+    .minigame-mode {
+        flex: 1 1 100%;
+    }
+
+    .battle-field {
+        gap: 0.75rem;
+    }
+
+    .battle-slot {
+        width: 132px;
+        height: 132px;
+    }
+
+    .battle-message {
+        max-width: 100%;
+    }
+
+    .mystery-card {
+        padding: 1rem;
+    }
+
+    .mystery-input-group {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    #mystery-answer,
+    .mystery-input-group .btn {
+        width: 100%;
+    }
+
+    .results-card {
+        padding: 1.25rem 0.5rem;
+    }
+
+    .results-card h2 {
+        font-size: 2rem;
+    }
+
+    .final-scores {
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .final-score-item h3 {
+        font-size: 3rem;
+    }
+
+    .modal-content {
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        padding: 1.5rem 1rem;
+    }
+
+    .modal-medal-container {
+        width: min(60vw, 220px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .modal-details {
+        gap: 0.5rem;
+    }
+
+    .modal-name {
+        font-size: 1.5rem;
+        overflow-wrap: anywhere;
+    }
+
+    .modal-tribe-icon,
+    .modal-rank-icon {
+        width: 35px;
+        height: 35px;
+        flex: 0 0 35px;
+    }
+
+    .expendekai-header h3 {
+        font-size: 2rem;
+    }
+
+    .expendekai-header p {
+        font-size: 1rem;
+    }
+
+    .expendekai-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .expendekai-item {
+        min-width: 0;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .expendekai-item .medallium-slot {
+        width: min(100%, 100px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 380px) {
+    .app-container {
+        padding: 0.75rem;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .main-tab {
+        font-size: 0.76rem;
+    }
+
+    #medalliumGrid .medallium-slot.locked span,
+    #medalliumGrid .medallium-slot.unlocked span {
+        font-size: 0.48rem;
+    }
+}
